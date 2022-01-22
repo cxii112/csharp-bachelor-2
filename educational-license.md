@@ -7,10 +7,16 @@
 
 ![Форма заявки][pic2]
 
+
+В конце не забываем прикрепить скан студака и прочитать соглашение (скипнуть не выйдет).
+
+![Подача заявки][pic3]
+
 В течение двух недель должен прийти ответ. Если заявка одобрена, то там будет вся необходимая информация.
 
 [pic1]: ./sources/free-license.png
 [pic2]: ./sources/free-license-2.png
+[pic3]: ./sources/free-license-3.png
 
 [jetbrains]: https://www.jetbrains.com
 [get-licenses]: https://www.jetbrains.com/community/education/#students

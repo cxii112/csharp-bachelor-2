@@ -24,6 +24,7 @@
 [pic1]: ./sources/download.png
 [pic2]: ./sources/download-2.png
 [pic3]: ./sources/download-3.png
+
 [rider]: https://www.jetbrains.com/rider/
 [features]: https://www.jetbrains.com/community/education/#students/faq
 [guide]: ./educational-license.md
