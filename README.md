@@ -26,4 +26,4 @@
 [pic3]: ./sources/download-3.png
 [rider]: https://www.jetbrains.com/rider/
 [features]: https://www.jetbrains.com/community/education/#students/faq
-[guide]: ./educational-licenes.md
+[guide]: ./educational-license.md
