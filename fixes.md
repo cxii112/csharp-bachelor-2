@@ -51,15 +51,18 @@
 Нужно переключиться меджу видом (представлениями)
 
 MSVisual: дабл-клик по *Предствление папки*
+
 ![Смена представления][framework-2_4-mvs]
 
 Rider: выбираем *File System*
+
 ![Смена представления][framework-2_4-rider]
 
 Далее находим файл формата `.csproj`. Меняем
 ```xml
 <TargetFrameworkVersion>v*новый номер версии*</TargetFrameworkVersion>
 ```
+
 ![Изменение руками][framework-2_5]
 
 
