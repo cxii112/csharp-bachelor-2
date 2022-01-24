@@ -15,8 +15,7 @@
 - [Visual Studio](#visual-studio)
 - [Rider](#rider)
 
-### Через окна
-#### Visual Studio
+### Visual Studio
 
 В *обозревателе решений* находим название проекта (в примере *staticMethods_HT*, оно может отличаться).
 ![Обозреватель решений][framework-2-mvs]
@@ -27,7 +26,7 @@
 В окне выбираем нужный (доступный) фреймворк.
 ![Выбор фреймворка][framework-2_3-mvs]
 
-#### Rider
+### Rider
 В *Explorer* (не Internet) находим название проекта (в примере *staticMethods_HT*, оно может отличаться).
 ![][framework-2-rider]
 Жмем правой кнопкой мыши. Выбираем `Properties`.
