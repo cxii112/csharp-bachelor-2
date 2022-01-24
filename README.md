@@ -16,6 +16,8 @@
   Т.е. можно открыть папку в MSVisual или Rider и все должно собраться, можно дабл-клик на <code>.sln</code> файл. IDE сама его откроет, и подтянет настройки. Если открыть целиком всю папку <code>csharp-bachelor-2</code>, скорее всего возникнет конфликт, между проектами (не проверял).
 </details>
 
+[Я скачал, но ничего не работает][fixes]
+
 ## Для пользователей Rider
 Для [Rider][rider] юзеров есть удобная кнопка `Clone in Rider`.
 
@@ -34,3 +36,4 @@
 [rider]: https://www.jetbrains.com/rider/
 [features]: https://www.jetbrains.com/community/education/#students/faq
 [guide]: ./educational-license.md
+[fixes]: ./fixes.md
