@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "staticMethods_HT", "staticMethods_HT\staticMethods_HT.csproj", "{37368245-6063-4381-B38A-DAAECD3D6050}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "staticMethods_CPC", "staticMethods_CPC\staticMethods_CPC.csproj", "{37368245-6063-4381-B38A-DAAECD3D6050}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

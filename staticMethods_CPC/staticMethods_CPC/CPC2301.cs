@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace staticMethods_HT
+namespace staticMethods_CPC
 {
     /**
      * @author Дмитрий Ляховой ММТ-2-2021
      */
-    internal class HT2301
+    internal class CPC2301
     {
         public static void Main(string[] args)
         {
