@@ -9,10 +9,28 @@ namespace staticMethods_CPC
     {
         public static void Main(string[] args)
         {
+            // Task1();
+            Task2();
+        }
+
+        private static void Task1()
+        {
             Console.Write("Введите n ");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"n! = {CountFactorial(n)}");
             Console.WriteLine($"1! + 2! + .. + n! = {CountSumFactorial(n)}");
+        }
+
+        private static void Task2()
+        {
+            Console.WriteLine("Вариант №4");
+            Console.Write("Введите a ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите b ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите c ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"X = {CountX(a, b, c)}");
         }
 
         private static int CountFactorial(int n)
@@ -46,6 +64,18 @@ namespace staticMethods_CPC
 
             return sum;
         }
+
+        private static double CountX(int a, int b, int c)
+        {
+            return CountFraction(a) +
+                   CountFraction(b) +
+                   CountFraction(c);
+        }
+
+        private static double CountFraction(int a)
+        {
+            return ((Math.Sqrt(2 * a) - a) / (Math.Sqrt(a) + 2 * a));
+        }
     }
     /*
      * Введите n 0
@@ -70,6 +100,7 @@ namespace staticMethods_CPC
      * n! = 2004189184
      * 1! + 2! + .. + n! = 522956314
      */
+    
     /*
      * Введите n 99
      * n! = 2004189184
