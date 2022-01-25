@@ -6,6 +6,16 @@
 
 ![New issue][new-issue]
 
+## Неправильно открылся проект
+
+Вероятнее всего он открылся в *Blend for Visual Studio*, а это значит, что придется немного поработать ручками.
+
+Находишь нужный `.sln` файл, правой кнопкой мыши по нему.
+
+![][open-with]
+
+Выбираешь свою IDE.
+
 ## Не совпадает фреймворк (`Microsoft.Common.CurrentVersion.targets [MSB3644]`)
 Если ты скачал, но ничего не собирается и выдает подобную ошибку:
 
@@ -85,3 +95,6 @@ Rider: выбираем *File System*
 [framework-3-mvs]: ./sources/issue-framework-3-mvs.png
 
 [new-issue]: ./sources/issue-new-issue.png
+
+
+[open-with]: ./sources/issue-open-with.png
