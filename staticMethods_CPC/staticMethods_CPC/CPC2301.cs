@@ -32,15 +32,16 @@ namespace staticMethods_CPC
 
         private static int CountSumFactorial(int n)
         {
-            int factorial = 1;
+            // int factorial = 1;
             int sum = 1;
             for (int i = 1; i <= n; i++)
             {
-                factorial *= i;
+                // factorial *= i;
+                // int factorial = CountFactorial(i);
                 // если текущее слагаемое больше, чем может поместить тип int
                 // то выходим из цикла 
-                if (factorial > int.MaxValue - sum) break;
-                sum += factorial;
+                if (sum > int.MaxValue - CountFactorial(i)) break;
+                sum += CountFactorial(i);
             }
 
             return sum;
