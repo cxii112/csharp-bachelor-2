@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recursion_1", "recursion_1\recursion_1.csproj", "{62C6B48B-5800-40B1-A646-D14374F5B7A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example", "example\example.csproj", "{6E00DBF8-73C0-4A96-93D0-8148307D5621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recursion_2", "recursion_2\recursion_2.csproj", "{D6343E99-2318-476E-B022-5901078FAB98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62C6B48B-5800-40B1-A646-D14374F5B7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C6B48B-5800-40B1-A646-D14374F5B7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C6B48B-5800-40B1-A646-D14374F5B7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C6B48B-5800-40B1-A646-D14374F5B7A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E00DBF8-73C0-4A96-93D0-8148307D5621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E00DBF8-73C0-4A96-93D0-8148307D5621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E00DBF8-73C0-4A96-93D0-8148307D5621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E00DBF8-73C0-4A96-93D0-8148307D5621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6343E99-2318-476E-B022-5901078FAB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6343E99-2318-476E-B022-5901078FAB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6343E99-2318-476E-B022-5901078FAB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6343E99-2318-476E-B022-5901078FAB98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
