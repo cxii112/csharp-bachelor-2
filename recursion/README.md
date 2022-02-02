@@ -36,4 +36,10 @@ private static long factorial(int n)
 
 ![][factorial-5]
 
+## Задание 2
+Ну тут мне нечего сказать, кроме того, что мне по условию задачи было не очевидно, что нужно было на каждый метод свой ввод параметров сделать. Но вот схема:
+
+![][printladder-1-5-eg]
+
 [factorial-5]: ../sources/factorial-5-eg.svg
+[printladder-1-5-eg]: ../sources/printladder-1-5-eg.svg
