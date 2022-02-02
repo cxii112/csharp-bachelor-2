@@ -16,10 +16,10 @@ namespace recursion_CPC
             Console.Write("m = ");
             int m = Convert.ToInt32(Console.ReadLine());
             
-            Console.WriteLine($"Функция Акермана A({n},{m}) = {AckermannFunction(n,m)}");
+            Console.WriteLine($"Функция Аккермана A({n},{m}) = {AckermannFunction(n,m)}");
         }
 
-        private static double AckermannFunction(double n, double m)
+        private static int AckermannFunction(int n, int m)
         {
             if (n == 0) return m + 1;
             if (m == 0) return AckermannFunction(n - 1, 1);
