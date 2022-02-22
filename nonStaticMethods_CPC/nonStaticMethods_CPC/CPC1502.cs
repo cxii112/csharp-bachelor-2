@@ -19,13 +19,15 @@ namespace nonStaticMethods_CPC
             Console.Write("n = ");
             int n = Convert.ToInt32(Console.ReadLine());
 
-            Sequences s = new Sequences();
+            // новый объект, отвечающий за последовательности
+            Serials s = new Serials();
+            // вызов s.Sum() с фактическим параметром n
             Console.WriteLine($"1! + 2! + .. + n! = {s.Sum(n)}");
         }
         // Тесты для Задания 1
         // n = 4
         // 1! + 2! + .. + n! = 33
-        
+
         // n = 1
         // 1! + 2! + .. + n! = 1
 
@@ -43,8 +45,12 @@ namespace nonStaticMethods_CPC
             double x = Convert.ToDouble(Console.ReadLine());
             Console.Write("y = ");
             double y = Convert.ToDouble(Console.ReadLine());
+
+            // новый объект, отвечающий за окружность
             Circle circle = new Circle();
-            Console.WriteLine($"l = {circle.Lenght(R)}");
+            // вызов circle.Length() и circle.Area()
+            // с фактическим параметром R
+            Console.WriteLine($"l = {circle.Length(R)}");
             Console.WriteLine($"S = {circle.Area(R)}");
             circle.MakeShot(x0, y0, R,
                             x, y);
@@ -61,7 +67,7 @@ namespace nonStaticMethods_CPC
         // S = 12,5663706143592
         // Выстрел в (1,1) в окружность с центром (0,0) радиуса 2
         // Попал
-        
+
         // Вариант #4
         // x0 = 0
         // y0 = 0
@@ -73,10 +79,9 @@ namespace nonStaticMethods_CPC
         // S = 50,2654824574367
         // Выстрел в (-1,2) в окружность с центром (0,0) радиуса 4
         // Попал
-
     }
 
-    public class Sequences
+    internal class Serials
     {
         private long Factorial(int n)
         {
@@ -94,26 +99,18 @@ namespace nonStaticMethods_CPC
         }
     }
 
-    public class Circle
+    internal class Circle
     {
-        /// <summary>
-        /// Вычисление площади по радиусу окружности.
-        /// </summary>
-        /// <param name="R">радиус окружности</param>
-        /// <returns>Площадь окружности</returns>
-        public double Area(double R)
+        internal double Area(double R)
         {
-            return Math.PI * R * R;
+            double area = Math.PI * R * R;
+            return area;
         }
 
-        /// <summary>
-        /// Находит длину окружности по радиусу.
-        /// </summary>
-        /// <param name="R">радиус окружности</param>
-        /// <returns>Длину окружности</returns>
-        public double Lenght(double R)
+        internal double Length(double R)
         {
-            return 2 * Math.PI * R;
+            double length = 2 * Math.PI * R;
+            return length;
         }
 
         /// <summary>
@@ -125,7 +122,7 @@ namespace nonStaticMethods_CPC
         /// <param name="x">x-координата выстрела</param>
         /// <param name="y">y-координата выстрела</param>
         public void MakeShot(double x0, double y0, double R,
-                             double x, double y)
+                             double x,  double y)
         {
             Console.WriteLine($"Выстрел в ({x},{y}) в окружность с центром ({x0},{y0}) радиуса {R}");
             if ((x - x0) * (x - x0) + (y - y0) * (y - y0) <= R * R)
