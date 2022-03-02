@@ -85,14 +85,14 @@ namespace nonStaticMethods_CPC
     {
         private long Factorial(int n)
         {
-            if (n == 1) return 1; // не рекурентная ветвь
+            if (n == 0) return 1; // не рекурентная ветвь
             // рекурсивно считаем факториал
             return n * Factorial(n - 1);
         }
 
         public long Sum(int n)
         {
-            if (n <= 1) return 1; // не рекурентная ветвь
+            if (n == 0) return Factorial(n); // не рекурентная ветвь
             // разбиваем ряд на 2 слагаемых:
             // N! и сумму ряда (N - 1)
             return Factorial(n) + Sum(n - 1);
