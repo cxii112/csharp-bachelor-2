@@ -14,21 +14,21 @@ namespace arrays2_CPC
         {
             string inputPath = $@"{args[0]}";
             string outputPath = $@"{args[1]}out.txt";
-            MASSIV_4 customArray = new MASSIV_4(10, inputPath, outputPath);
+            MASSIV_4 customArray = new MASSIV_4(5, inputPath, outputPath);
             customArray.Read();
             Console.WriteLine($"Полученный массив: {customArray}");
-            
+
             customArray.Remove44();
             Console.WriteLine($"Без 44: {customArray}");
-            
+
             Console.Write("Введите элемент, после которого надо удалить оставшиеся ");
-            int borderNumber = Convert.ToInt32(Console.ReadLine());
-            customArray.RemoveAllAfter(borderNumber);
+            int K4 = Convert.ToInt32(Console.ReadLine());
+            customArray.RemoveAllAfter(K4);
             Console.WriteLine($"Обрезанный массив: {customArray}");
-            
+
             customArray.MakeCirclePermutations();
             Console.WriteLine($"Массив после цикличного сдвига: {customArray}");
-            
+
             customArray.Write();
         }
         // Полученный массив: [44, 123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
@@ -37,14 +37,14 @@ namespace arrays2_CPC
         // Обрезанный массив: [123, -34, 12523, 2532, 4574]
         // Массив после цикличного сдвига: [-34, 12523, 2532, 4574, 123]
 
-        
+
         // Полученный массив: [44, 123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
         // Без 44: [123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
         // Введите элемент, после которого надо удалить оставшиеся -924
         // Обрезанный массив: [123, -34, 12523, 2532, 4574, -924]
         // Массив после цикличного сдвига: [123, -34, 12523, 2532, 4574, -924]
 
-        
+
         // Полученный массив: [44, 123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
         // Без 44: [123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
         // Введите элемент, после которого надо удалить оставшиеся 12523
@@ -88,7 +88,8 @@ namespace arrays2_CPC
             {
                 Numbers = inputStream.ReadLine()
                                      .Split(',')
-                                     .Take(N4)
+                                     .Take(N4) // Выбираем N4 штук элементов
+                                     // берем каждый и применяем к нему инструкцию в скобках
                                      .Select(numberString => int.Parse(numberString))
                                      .ToArray();
             }
@@ -103,24 +104,32 @@ namespace arrays2_CPC
             }
         }
 
-        public void RemoveAllAfter(int after)
+        public void RemoveAllAfter(int borderNumber)
         {
-            Numbers = Numbers.TakeWhile(number => number != after)
-                             .Append(after)
-                             .ToArray();
+            Numbers = Numbers
+                      // берем элементы пока условие выполняется
+                      .TakeWhile(number => number != borderNumber)
+                      // добавляем граничный элемент в конец, т.к. он не был записан
+                      .Append(borderNumber)
+                      .ToArray();
         }
 
         public void Remove44()
         {
-            Numbers = Numbers.Where(number => number != 44)
-                             .ToArray();
+            Numbers = Numbers
+                      // берем все, которые соответствуют условию в скобках
+                      .Where(number => number != 44)
+                      .ToArray();
         }
 
         public void MakeCirclePermutations()
         {
             for (int i = 0; i < 6; i++)
             {
-                Numbers = Numbers.Skip(1).Append(Numbers[0]).ToArray();
+                Numbers = Numbers
+                          .Skip(1) // пропускаем 1й элемент
+                          .Append(Numbers[0]) // добавляем его в конец
+                          .ToArray();
             }
         }
 
