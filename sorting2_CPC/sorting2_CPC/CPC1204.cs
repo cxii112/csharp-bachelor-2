@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Linq;
-using System.Security.Cryptography;
 
 namespace sorting2
 {
-    internal class Program
+    internal class CPC1204
     {
         public static void Main(string[] args)
         {

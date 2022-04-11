@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sorting2_CPC", "sorting2_CPC\sorting2_CPC.csproj", "{D4FC0BE7-E6CD-465C-82C1-B74D0841D69E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sorting2_withLinq_CPC", "sorting2_withLinq_CPC\sorting2_withLinq_CPC.csproj", "{E8393E69-5EA6-480E-B853-F8F8D7860F13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{D4FC0BE7-E6CD-465C-82C1-B74D0841D69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FC0BE7-E6CD-465C-82C1-B74D0841D69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4FC0BE7-E6CD-465C-82C1-B74D0841D69E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8393E69-5EA6-480E-B853-F8F8D7860F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8393E69-5EA6-480E-B853-F8F8D7860F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8393E69-5EA6-480E-B853-F8F8D7860F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8393E69-5EA6-480E-B853-F8F8D7860F13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
