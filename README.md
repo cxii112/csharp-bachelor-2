@@ -2,8 +2,21 @@
 Я решил, что к каждому решению (папке) буду делать подобный файл-гайд. Так что открыв папку листай ниже, ищи гайд.
 
 ## Ссылки на работы
-* [Статические методы(ауд)][static-methods-aud]
-* [Статические методы(СРС)][static-methods-cpc]
+* [Статические методы **(ауд)**][static-methods-aud]
+* [Статические методы **(СРС)**][static-methods-cpc]
+* [Нестатические методы **(ауд)**][non-static-methods-aud]
+* [Нестатические методы **(CPC)**][non-static-methods-cpc]
+* [Рекурсия **(ауд)**][recursion-aud]
+* [Рекурсия **(СРС)**][recursion-cpc]
+* [Конструкторы **(ауд)**][constructors-aud]
+* [Конструкторы **(СРС)**][constructors-cpc]
+* [Массивы **(ауд)**][arrays-aud]
+* [Массивы **(СРС)**][arrays-cpc]
+* [Массивы 2 **(ауд)**][arrays2-aud]
+* [Массивы 2 **(СРС)**][arrays2-cpc]
+* [Сортировки *(простые сортировки)***(ауд + срс)**][sorting]
+* [Сортировки 2 *(Быстрые сортировки)***(ауд)**][sorting2-aud]
+* [Сортировки 2 *(Быстрые сортировки)***(СРС)**][sorting2-cpc]
 
 ## Загрузка
 Чтоб загрузить нажми на зеленую кнопку `Code ▼`.
@@ -25,7 +38,7 @@
 
 После того, как архив скачан и распакован выбирай папку с нужной работой. Заходи в неё и дабл-клик на `.sln` файл. IDE сама его откроет, и подтянет настройки.
 
-[Яоткрыл, но что-то не так с окнами и вообще все не то][fixes]
+[Я открыл, но что-то не так с окнами и вообще все не то][fixes]
 
 [Я скачал, но ничего не работает][fixes]
 
@@ -51,3 +64,16 @@
 
 [static-methods-aud]: ./staticMethods/
 [static-methods-cpc]: ./staticMethods_CPC/
+[non-static-methods-aud]: ./nonStaticMethods/
+[non-static-methods-cpc]:./nonStaticMethods_CPC/
+[recursion-aud]: ./recursion/
+[recursion-cpc]: ./recursion_CPC/
+[constructors-aud]: ./constructors/
+[constructors-cpc]: ./constructors_CPC/
+[arrays-aud]: ./arrays/
+[arrays-cpc]: ./arrays_CPC/
+[arrays2-aud]: ./arrays2/
+[arrays2-cpc]: ./arrays2_CPC/
+[sorting]: ./sorting/
+[sorting2-aud]: ./sorting2/
+[sorting2-cpc]: ./sorting2_CPC/
