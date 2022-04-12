@@ -49,5 +49,5 @@
 [guide]: ./educational-license.md
 [fixes]: ./fixes.md
 
-[static-methods-aud]: ./tree/main/staticMethods/
-[static-methods-cpc]: ./tree/main/staticMethods_CPC/
+[static-methods-aud]: ./staticMethods/
+[static-methods-cpc]: ./staticMethods_CPC/
