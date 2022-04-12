@@ -1,6 +1,10 @@
 # Информация
 Я решил, что к каждому решению (папке) буду делать подобный файл-гайд. Так что открыв папку листай ниже, ищи гайд.
 
+## Ссылки на работы
+* [Статические методы(ауд)][static-methods-aud]
+* [Статические методы(СРС)][static-methods-cpc]
+
 ## Загрузка
 Чтоб загрузить нажми на зеленую кнопку `Code ▼`.
 
@@ -44,3 +48,6 @@
 [features]: https://www.jetbrains.com/community/education/#students/faq
 [guide]: ./educational-license.md
 [fixes]: ./fixes.md
+
+[static-methods-aud]: ./tree/main/staticMethods
+[static-methods-cpc]: ./tree/main/staticMethods_CPC
