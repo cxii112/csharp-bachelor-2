@@ -17,6 +17,9 @@
 * [Сортировки *(простые сортировки)***(ауд + срс)**][sorting]
 * [Сортировки 2 *(Быстрые сортировки)***(ауд)**][sorting2-aud]
 * [Сортировки 2 *(Быстрые сортировки)***(СРС)**][sorting2-cpc]
+* [Сортировки 2 *(Быстрые сортировки)***(СРС)**][sorting2-advanced]
+* [Оконные приложения **(ауд)**][winforms-aud]
+* [Оконные приложения **(СРС)**][winforms-cpc]
 
 ## Загрузка
 Чтоб загрузить нажми на зеленую кнопку `Code ▼`.
@@ -77,3 +80,6 @@
 [sorting]: ./sorting/
 [sorting2-aud]: ./sorting2/
 [sorting2-cpc]: ./sorting2_CPC/
+[sorting2-advanced]: ./sorting2_CPC/sorting2_Advanced_CPC/
+[winforms-aud]: ./forms/
+[winforms-cpc]: ./forms_CPC/
