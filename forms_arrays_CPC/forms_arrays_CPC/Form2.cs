@@ -13,8 +13,10 @@ namespace forms_arrays_CPC
     public partial class Form2 : Form
     {
         private readonly List<int> _source;
-        public Form2(List<int> source)
+        private readonly MainForm _mainForm;
+        public Form2(MainForm mainForm, List<int> source)
         {
+            _mainForm = mainForm;
             _source = source;
             InitializeComponent();
             DisplayArray();
@@ -40,6 +42,7 @@ namespace forms_arrays_CPC
 
         private void goBackButton_Click(object sender, EventArgs e)
         {
+            _mainForm.Show();
             this.Close();
         }
 

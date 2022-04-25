@@ -35,8 +35,9 @@ namespace forms_arrays_CPC
         private void nextFormButton_Click(object sender, EventArgs e)
         {
             _numbers = GenerateNumbers(Count);
-            Form2 form2 = new Form2(_numbers);
+            Form2 form2 = new Form2(this, _numbers);
             form2.Show();
+            this.Hide();
         }
     }
 }
