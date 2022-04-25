@@ -15,8 +15,8 @@ namespace forms_CPC.Models
 
         private static double EvaluateFunction(double x)
         {
-            const double a = 1.35;
-            const double b = -6.25;
+            const double a = 1;
+            const double b = 0;
 
             return a * Math.Pow(x, 3) + Math.Pow(Math.Cos(Math.Pow(x, 3) - b), 2);
         }
