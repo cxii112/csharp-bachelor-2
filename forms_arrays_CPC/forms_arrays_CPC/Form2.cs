@@ -74,7 +74,7 @@ namespace forms_arrays_CPC
                     negatives.Add(number);
                 }
             });
-            return negatives;
+            return source;
         }
     }
 }

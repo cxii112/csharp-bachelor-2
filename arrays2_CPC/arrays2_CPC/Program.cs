@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 
 namespace arrays2_CPC
 {
@@ -31,25 +30,6 @@ namespace arrays2_CPC
 
             customArray.Write();
         }
-        // Полученный массив: [44, 123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
-        // Без 44: [123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
-        // Введите элемент, после которого надо удалить оставшиеся 4574
-        // Обрезанный массив: [123, -34, 12523, 2532, 4574]
-        // Массив после цикличного сдвига: [-34, 12523, 2532, 4574, 123]
-
-
-        // Полученный массив: [44, 123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
-        // Без 44: [123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
-        // Введите элемент, после которого надо удалить оставшиеся -924
-        // Обрезанный массив: [123, -34, 12523, 2532, 4574, -924]
-        // Массив после цикличного сдвига: [123, -34, 12523, 2532, 4574, -924]
-
-
-        // Полученный массив: [44, 123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
-        // Без 44: [123, -34, 12523, 2532, 4574, -924, 340, -904, 1]
-        // Введите элемент, после которого надо удалить оставшиеся 12523
-        // Обрезанный массив: [123, -34, 12523]
-        // Массив после цикличного сдвига: [123, -34, 12523]
     }
 
     // Задание
@@ -86,12 +66,13 @@ namespace arrays2_CPC
         {
             using (StreamReader inputStream = File.OpenText(InputFile))
             {
-                Numbers = inputStream.ReadLine()
-                                     .Split(',')
-                                     .Take(N4) // Выбираем N4 штук элементов
-                                     // берем каждый и применяем к нему инструкцию в скобках
-                                     .Select(numberString => int.Parse(numberString))
-                                     .ToArray();
+                string[] strings = inputStream.ReadToEnd()
+                                              .Split(',');
+                Numbers = new int[N4];
+                for (int i = 0; i < Numbers.Length; i++)
+                {
+                    Numbers[i] = int.Parse(strings[i]);
+                }
             }
         }
 
@@ -104,32 +85,51 @@ namespace arrays2_CPC
             }
         }
 
-        public void RemoveAllAfter(int borderNumber)
+        public void RemoveAllAfter(int borderIndex)
         {
-            Numbers = Numbers
-                      // берем элементы пока условие выполняется
-                      .TakeWhile(number => number != borderNumber)
-                      // добавляем граничный элемент в конец, т.к. он не был записан
-                      .Append(borderNumber)
-                      .ToArray();
+            int[] newNumbers = new int[Numbers.Length - borderIndex];
+            for (int i = 0; i < newNumbers.Length; i++)
+            {
+                newNumbers[i] = Numbers[i];
+            }
+
+            Numbers = newNumbers;
         }
 
         public void Remove44()
         {
-            Numbers = Numbers
-                      // берем все, которые соответствуют условию в скобках
-                      .Where(number => number != 44)
-                      .ToArray();
+            int indexOf44 = -1;
+            for (int i = 0; i < Numbers.Length; i++)
+            {
+                if (Numbers[i] != 44) continue;
+                indexOf44 = i;
+            }
+
+            // выход если нет 44
+            if (indexOf44 == -1) return;
+            int[] newNumbers = new int[Numbers.Length - 1];
+            for (int i = 0; i < indexOf44; i++)
+            {
+                newNumbers[i] = Numbers[i];
+            }
+
+            for (int i = indexOf44; i < Numbers.Length - 1; i++)
+            {
+                newNumbers[i] = Numbers[i + 1];
+            }
         }
 
         public void MakeCirclePermutations()
         {
             for (int i = 0; i < 6; i++)
             {
-                Numbers = Numbers
-                          .Skip(1) // пропускаем 1й элемент
-                          .Append(Numbers[0]) // добавляем его в конец
-                          .ToArray();
+                int temp = Numbers[0];
+                for (int j = 0; j < Numbers.Length - 1; j++)
+                {
+                    Numbers[j] = Numbers[j + 1];
+                }
+
+                Numbers[Numbers.Length - 1] = temp;
             }
         }
 

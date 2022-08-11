@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace arrays_CPC
 {
@@ -24,6 +23,7 @@ namespace arrays_CPC
             {
                 numbers[i + 1] = numbers[i];
             }
+
             numbers[4] = 10;
             Print(numbers, "Измененный массив");
 
@@ -33,24 +33,10 @@ namespace arrays_CPC
             {
                 numbers[i] = numbers[i + 1];
             }
+
             numbers[n - 1] = 0;
             Print(numbers, "Измененный массив");
         }
-
-        // Исходный массив [81, 84, 14, 32, 97, 88, 85, 83, 11, 34]
-        // Отсортированный массив [11, 14, 32, 34, 81, 83, 84, 85, 88, 97]
-        // Четные элементы [14, 32, 34, 84, 88]
-        // Сумма 609
-        // Произведение 68653920952995840
-        // Среднее арифметическое 60,9
-
-
-        // Исходный массив [20, 72, 2, 92, 25, 49, 20, 97, 45, 95]
-        // Отсортированный массив [2, 20, 20, 25, 45, 49, 72, 92, 95, 97]
-        // Четные элементы [2, 20, 20, 72, 92]
-        // Сумма 517
-        // Произведение 2691871056000000
-        // Среднее арифметическое 51,7
 
         private static void InitWithRandom(ref int[] destination)
         {
@@ -97,9 +83,13 @@ namespace arrays_CPC
 
         private static void PrintAllEven(int[] source)
         {
-            // int[] evens = Array.FindAll(source, number => number % 2 == 0);
-            int[] evens = source.Where(number => number % 2 == 0).ToArray();
-            Print(evens, "Четные элементы");
+            Console.Write("Четный массив [");
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] % 2 != 0) continue;
+                Console.Write($"{source[i]} ");
+            }
+            Console.WriteLine("]");
         }
     }
 }

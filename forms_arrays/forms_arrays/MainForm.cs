@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace forms_arrays
@@ -54,23 +47,31 @@ namespace forms_arrays
             }
         }
 
-        private int[] MatrixToRow()
+        private int SummMatrixElements()
         {
-            int[] row = new int[N * M];
-            for (int i = 0; i < N; i++)
+            int sum = 0;
+
+            foreach (int number in _matrix)
             {
-                for (int j = 0; j < M; j++)
-                {
-                    row[i * N + j] = _matrix[i, j];
-                }
+                sum += number;
             }
 
-            return row;
+            return sum;
         }
 
         private void updateMatrixButton_Click(object sender, EventArgs e)
         {
             UpdateMatrix();
+            sumLabel.Text = $"{SummMatrixElements()}";
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Вы уверены?", "Выход", MessageBoxButtons.YesNo);
+            if (dialogResult != DialogResult.Yes) return;
+
+            this.Dispose();
+            this.Close();
         }
     }
 }
